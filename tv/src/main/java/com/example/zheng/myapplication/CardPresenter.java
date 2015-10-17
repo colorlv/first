@@ -32,25 +32,7 @@ import java.net.URI;
 /*
  * A CardPresenter is used to generate Views and bind Objects to them on demand. 
  * It contains an Image CardView
- */
-public class CardPresenter extends Presenter {
-    private static final String TAG = "CardPresenter";
 
-    private static Context mContext;
-    private static int CARD_WIDTH = 313;
-    private static int CARD_HEIGHT = 176;
-
-    static class ViewHolder extends Presenter.ViewHolder {
-        private Movie mMovie;
-        private ImageCardView mCardView;
-        private Drawable mDefaultCardImage;
-        private PicassoImageCardViewTarget mImageCardViewTarget;
-
-        public ViewHolder(View view) {
-            super(view);
-            mCardView = (ImageCardView) view;
-            mImageCardViewTarget = new PicassoImageCardViewTarget(mCardView);
-            mDefaultCardImage = mContext.getResources().getDrawable(R.drawable.movie);
         }
 
         public void setMovie(Movie m) {
